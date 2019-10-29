@@ -25,3 +25,8 @@
 - Methods: Any methods in the class
 - Attributes: Any attributes of the class (e.g., name of the source file, etc.)
 
+# HotSpot
+In April 1999 Sun introduced one of the biggest changes to Java in terms of performance. The HotSpot virtual machine is a key feature of Java that has evolved to enable performance that is comparable to (or better than) languages such as C and C++.
+
+![](http://www.computepatterns.com/wp-content/uploads/2017/04/jvm-code-compilation.png)
+
