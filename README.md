@@ -36,14 +36,15 @@ In April 1999 Sun introduced one of the biggest changes to Java in terms of perf
 
 HotSpot achieves this by compiling units of your program from interpreted bytecode into native code. The units of compilation in the HotSpot VM are the method and the loop. This is known as Just-in-Time (JIT) compilation.
 
-## JVM Memory Management
+<br/>
+
+# JVM Memory Management
 
 Java looked to help resolve the problem by introducing automatically managed heap memory using a process known as garbage collection (GC). Simply put, garbage collection is a **nondeterministic** process that triggers to recover and reuse no-longer-needed memory when the JVM requires more memory for allocation.
 
 GC comes at a cost: when it runs, it often stops the world, which means while GC is in progress the application pauses. Usually these pause times are designed to be incredibly small, but as an application is put under pressure they can increase.
 
-
-# Garbage Collection
+## Garbage Collection
 
 The overall GC "Mark and Sweep" algorithm can then be expressed as:
 
@@ -61,13 +62,32 @@ After the sweep phase, all the memory locations are rearranged to provide a more
 
 ![](https://miro.medium.com/max/1729/1*8b-ANSuneRBXkO1JNtH6LQ.png)
 
+## Allocation and Lifetime
+There are two primary drivers of the garbage collection behavior of a Java application:
+
+Allocation rate
+
+Object lifetime
+
+The allocation rate is the amount of memory used by newly created objects over some time period (usually measured in MB/s). 
+
+## OOPs & KlassOOPs
+- https://www.infoq.com/articles/Introduction-to-HotSpot/
+
+## The Parallel Collectors
+
+- Parallel GC: The simplest collector for the young generation
+- ParNew: A slight variation of Parallel GC that is used with the CMS collector
+- ParallelOld: The parallel collector for the old (aka Tenured) generation
+
 ## References
 - https://www.cubrid.org/blog/understanding-java-garbage-collection
 - https://blogs.oracle.com/jonthecollector/the-unspoken-phases-of-cms
+- https://gceasy.io/
 
+<br/>
 
 # General Topics
-
 ## JVM
 - OpenJDK
 - Oracle
