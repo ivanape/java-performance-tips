@@ -83,6 +83,7 @@ The allocation rate is the amount of memory used by newly created objects over s
 ## References
 - https://www.cubrid.org/blog/understanding-java-garbage-collection
 - https://blogs.oracle.com/jonthecollector/the-unspoken-phases-of-cms
+- https://github.com/chewiebug/GCViewer/wiki/Changelog
 - https://gceasy.io/
 
 <br/>
