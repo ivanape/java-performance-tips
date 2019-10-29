@@ -60,4 +60,25 @@ GC comes at a cost: when it runs, it often stops the world, which means while GC
 - The JVM Tool Interface (JVMTI)
 - The Serviceability Agent (SA)
 
+# Garbage Collection
+
+The overall GC "Mark and Sweep" algorithm can then be expressed as:
+
+- Loop through the allocated list, clearing the mark bit.
+- Starting from the GC roots, find the live objects.
+- Set a mark bit on each object reached.
+- Loop through the allocated list, and for each object whose mark bit hasn’t been set:
+  - Reclaim the memory in the heap and place it back on the free list.
+  - Remove the object from the allocated list.
+
+![](https://miro.medium.com/max/1741/1*_xkq7jGtAKf7SP1R1a8vcA.png)
+![](https://miro.medium.com/max/1732/1*eZTk9FfqQVMpNWmmdgS8VA.png)
+
+After the sweep phase, all the memory locations are rearranged to provide a more compact memory allocation. The downside of this approach is an increased GC pause duration as it needs to copy all objects to a new place and to update all references to such objects.
+
+![](https://miro.medium.com/max/1729/1*8b-ANSuneRBXkO1JNtH6LQ.png)
+
+## References
+- https://www.cubrid.org/blog/understanding-java-garbage-collection
+- https://blogs.oracle.com/jonthecollector/the-unspoken-phases-of-cms
 
