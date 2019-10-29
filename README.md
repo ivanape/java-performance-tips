@@ -42,23 +42,6 @@ Java looked to help resolve the problem by introducing automatically managed hea
 
 GC comes at a cost: when it runs, it often stops the world, which means while GC is in progress the application pauses. Usually these pause times are designed to be incredibly small, but as an application is put under pressure they can increase.
 
-# JVMs
-
-- OpenJDK
-- Oracle
-- Zulu
-- IcedTea
-- Zing
-- J9
-- Avian
-- Android
-
-# Monitoring and Tooling for the JVM
-
-- Java Management Extensions (JMX)
-- Java agents
-- The JVM Tool Interface (JVMTI)
-- The Serviceability Agent (SA)
 
 # Garbage Collection
 
@@ -81,4 +64,24 @@ After the sweep phase, all the memory locations are rearranged to provide a more
 ## References
 - https://www.cubrid.org/blog/understanding-java-garbage-collection
 - https://blogs.oracle.com/jonthecollector/the-unspoken-phases-of-cms
+
+
+# General Topics
+
+## JVM
+- OpenJDK
+- Oracle
+- Zulu
+- IcedTea
+- Zing
+- J9
+- Avian
+- Android
+
+## Monitoring and Tooling for the JVM
+
+- Java Management Extensions (JMX)
+- Java agents
+- The JVM Tool Interface (JVMTI)
+- The Serviceability Agent (SA)
 
