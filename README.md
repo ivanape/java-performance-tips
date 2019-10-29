@@ -105,3 +105,6 @@ The allocation rate is the amount of memory used by newly created objects over s
 - The JVM Tool Interface (JVMTI)
 - The Serviceability Agent (SA)
 
+## Xlog
+- http://openjdk.java.net/jeps/158
+
