@@ -40,6 +40,24 @@ HotSpot achieves this by compiling units of your program from interpreted byteco
 
 Java looked to help resolve the problem by introducing automatically managed heap memory using a process known as garbage collection (GC). Simply put, garbage collection is a **nondeterministic** process that triggers to recover and reuse no-longer-needed memory when the JVM requires more memory for allocation.
 
-GC comes at a cost: when it runs, it often stops the world, which means while GC is in progress the application pauses. Usually these pause times are designed to be incredibly small, but as an application is put under pressure they can increase
+GC comes at a cost: when it runs, it often stops the world, which means while GC is in progress the application pauses. Usually these pause times are designed to be incredibly small, but as an application is put under pressure they can increase.
+
+# JVMs
+
+- OpenJDK
+- Oracle
+- Zulu
+- IcedTea
+- Zing
+- J9
+- Avian
+- Android
+
+# Monitoring and Tooling for the JVM
+
+- Java Management Extensions (JMX)
+- Java agents
+- The JVM Tool Interface (JVMTI)
+- The Serviceability Agent (SA)
 
 
