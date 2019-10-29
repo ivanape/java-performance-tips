@@ -108,3 +108,11 @@ The allocation rate is the amount of memory used by newly created objects over s
 ## Xlog
 - http://openjdk.java.net/jeps/158
 
+Xlog configuration examples:
+
+````
+-Xlog:gc*,gc+ref=debug,gc+heap=debug,gc+age=trace:file=gc-%p-%t.log:tags,uptime,time,level:filecount=10,filesize=50m
+
+-Xlog:safepoint*:file=safepoints-%p-%t.log:tags,uptime,time,level:filecount=10,filesize=50m
+```
+
