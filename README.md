@@ -92,13 +92,21 @@ The allocation rate is the amount of memory used by newly created objects over s
 
 ## GC Tools
 
+### Xlog
+- http://openjdk.java.net/jeps/158
 
+Xlog configuration examples:
 
-## References
-- https://www.cubrid.org/blog/understanding-java-garbage-collection
-- https://blogs.oracle.com/jonthecollector/the-unspoken-phases-of-cms
+```
+-Xlog:gc*,gc+ref=debug,gc+heap=debug,gc+age=trace:file=gc-%p-%t.log:tags,uptime,time,level:filecount=10,filesize=50m
+
+-Xlog:safepoint*:file=safepoints-%p-%t.log:tags,uptime,time,level:filecount=10,filesize=50m
+```
+
+### GCViewer
 - https://github.com/chewiebug/GCViewer/wiki/Changelog
 - https://gceasy.io/
+
 
 <br/>
 
@@ -207,15 +215,4 @@ Profiling
 - Instrumenting and sampling profiles
 - Not as much as you’d get from a true profiler, but the JFR profile provides a good high-order overview
 
-
-## Xlog
-- http://openjdk.java.net/jeps/158
-
-Xlog configuration examples:
-
-````
--Xlog:gc*,gc+ref=debug,gc+heap=debug,gc+age=trace:file=gc-%p-%t.log:tags,uptime,time,level:filecount=10,filesize=50m
-
--Xlog:safepoint*:file=safepoints-%p-%t.log:tags,uptime,time,level:filecount=10,filesize=50m
-```
 
