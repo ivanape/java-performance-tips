@@ -64,12 +64,19 @@ After the sweep phase, all the memory locations are rearranged to provide a more
 
 ![](https://miro.medium.com/max/1729/1*8b-ANSuneRBXkO1JNtH6LQ.png)
 
+- GC algorithms generally divide the heap into old and young generations.
+- GC algorithms generally employ a stop-the-world approach to clearing objects from the young generation, which is usually a very quick operation.
+- Minimizing the effect of performing GC in the old generation is a trade off between pause times and CPU usage.
+
+### OpenJDK Collectors
+- https://docs.oracle.com/en/java/javase/12/gctuning/available-collectors.html#GUID-F215A508-9E58-40B4-90A5-74E29BF3BD3C
+
+
 ## Allocation and Lifetime
 There are two primary drivers of the garbage collection behavior of a Java application:
 
-Allocation rate
-
-Object lifetime
+- Allocation rate
+- Object lifetime
 
 The allocation rate is the amount of memory used by newly created objects over some time period (usually measured in MB/s). 
 
