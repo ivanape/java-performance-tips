@@ -153,6 +153,49 @@ Native profiling tools are those that profile the JVM itself. This allows visibi
 
 ## Java Flight Recorder
 
+The list of events that follows displays two bullet points for each event type. Events can collect basic information that can be collected with other tools like jconsole and jcmd; that kind of information is described in the first bullet. The second bullet describes information the event provides that is difficult to obtain outside of JFR.
+
+Classloading
+- Number of classes loaded and unloaded
+- Which classloader loaded the class; time required to load an individual class
+
+Thread statistics
+- Number of threads created and destroyed; thread dumps
+- Which threads are blocked on locks (and the specific lock they are blocked on)
+
+Throwables
+- Throwable classes used by the application
+- How many exceptions and errors are thrown and the stack trace of their creation
+
+TLAB allocation
+- The number of allocations in the heap and size of thread-local allocation buffers (TLABs)
+- The specific objects allocated in the heap and the stack trace where they are allocated
+
+File and socket I/O
+- Time spent performing I/O
+- Time spent per read/write call, the specific file or socket taking a long time to read or write
+
+Monitor blocked
+- Threads waiting for a monitor
+- Specific threads blocked on specific monitors and the length of time they are blocked
+
+Code cache
+- Size of code cache and how much it contains
+- Methods removed from the code cache; code cache configuration
+
+Code compilation
+- Which methods are compiled, OSR compilation, and length of time to compile
+- Nothing specific to JFR, but unifies information from several sources
+
+Garbage collection
+- Times for GC, including individual phases; sizes of generations
+- Nothing specific to JFR, but unifies the information from several tools
+
+Profiling
+- Instrumenting and sampling profiles
+- Not as much as you’d get from a true profiler, but the JFR profile provides a good high-order overview
+
+
 ## Xlog
 - http://openjdk.java.net/jeps/158
 
