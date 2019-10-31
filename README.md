@@ -169,6 +169,9 @@ Provides information about GC and class-loading activities. Suitable for scripti
 ### jvisualvm
 A GUI tool to monitor a JVM, profile a running application, and analyze JVM heap dumps (which is a postprocessing activity, though jvisualvm can also take the heap dump from a live program).
 
+#### References
+- https://blog.frankel.ch/openjdk-11-tools-trade/
+
 ## Profiling Tools
 Profilers are the most important tool in a performance analyst’s toolbox. Profiling happens in one of two modes: sampling mode or instrumented mode.
 
