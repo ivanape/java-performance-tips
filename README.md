@@ -92,6 +92,12 @@ The allocation rate is the amount of memory used by newly created objects over s
 
 ## GC Tools
 
+### jstack
+
+```
+jstat -gcutil process_id 1000
+```
+
 ### Xlog
 - http://openjdk.java.net/jeps/158
 
@@ -106,6 +112,12 @@ Xlog configuration examples:
 ### GCViewer
 - https://github.com/chewiebug/GCViewer/wiki/Changelog
 - https://gceasy.io/
+
+## GC Tips
+- GC logs are the key piece of data required to diagnose GC issues; they should be collected routinely (even on production servers).
+- A better GC logfile is obtained with the PrintGCDetails flag.
+- Programs to parse and understand GC logs are readily available; they are quite helpful in summarizing the data in the GC log.
+- `jstat` can provide good visibility into GC for a live program.
 
 
 <br/>
