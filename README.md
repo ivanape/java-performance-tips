@@ -148,6 +148,11 @@ Instrumented profilers are much more intrusive than sampling profilers, but they
 
 Instrumented profilers yield more information about an application, but can possibly have a greater effect on the application than a sampling profiler. Instrumented profilers should be set up to instrument small sections of the code—a few classes or packages. That limits their impact on the application’s performance.
 
+### Native Profilers
+Native profiling tools are those that profile the JVM itself. This allows visibility into what the JVM is doing, and if an application includes its own native libraries, it allows visibility into that code as well. Any native profiling tool can be used to profile the C code of the JVM (and of any native libraries), but some native-based tools can profile both the Java and C/C++ code of an application.
+
+## Java Flight Recorder
+
 ## Xlog
 - http://openjdk.java.net/jeps/158
 
