@@ -69,8 +69,15 @@ After the sweep phase, all the memory locations are rearranged to provide a more
 - Minimizing the effect of performing GC in the old generation is a trade off between pause times and CPU usage.
 
 ### OpenJDK Collectors
+
 - https://docs.oracle.com/en/java/javase/12/gctuning/available-collectors.html#GUID-F215A508-9E58-40B4-90A5-74E29BF3BD3C
 
+### Basic GC Tuning
+- Sizing the Heap
+- Sizing the Generations
+- Sizing Metaspace
+- Controlling Parallelism
+- Adaptive Sizing
 
 ## Allocation and Lifetime
 There are two primary drivers of the garbage collection behavior of a Java application:
@@ -83,11 +90,9 @@ The allocation rate is the amount of memory used by newly created objects over s
 ## OOPs & KlassOOPs
 - https://www.infoq.com/articles/Introduction-to-HotSpot/
 
-## The Parallel Collectors
+## GC Tools
 
-- Parallel GC: The simplest collector for the young generation
-- ParNew: A slight variation of Parallel GC that is used with the CMS collector
-- ParallelOld: The parallel collector for the old (aka Tenured) generation
+
 
 ## References
 - https://www.cubrid.org/blog/understanding-java-garbage-collection
