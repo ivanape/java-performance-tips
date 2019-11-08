@@ -122,6 +122,7 @@ Xlog configuration examples:
 ## GC Causes Distilled
 
 - https://dzone.com/articles/java-gc-causes-distilled
+- https://es.slideshare.net/KubaKubryski/xxuseg1gc
 
 <br/>
 
