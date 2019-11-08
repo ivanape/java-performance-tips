@@ -119,6 +119,9 @@ Xlog configuration examples:
 - Programs to parse and understand GC logs are readily available; they are quite helpful in summarizing the data in the GC log.
 - `jstat` can provide good visibility into GC for a live program.
 
+## GC Causes Distilled
+
+- https://dzone.com/articles/java-gc-causes-distilled
 
 <br/>
 
